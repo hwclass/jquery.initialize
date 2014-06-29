@@ -14,12 +14,12 @@
     };
     
     var setEvents = function () {
-      for (var countForEventsObj = 0, len = getSize(options.events); countForEventsObj < len; countForEventsObj++) {
-        $(this).on(options.events[countForEventsObj].name, options.events[countForEventsObj].funcBody)
+      for (var countForEventsObj = 0, len = getSize(opts.events); countForEventsObj < len; countForEventsObj++) {
+        $(this).on(opts.events[countForEventsObj].name, opts.events[countForEventsObj].funcBody)
       }
     }
     
-    if (options.init) {
+    if (opts.init) {
       setEvents();
     }
     
