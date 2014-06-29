@@ -1,4 +1,4 @@
-## jquery.initalize 0.1.0
+## jquery.initialize 0.1.0
 
 An basic element initializer plugin for jQuery.
 
