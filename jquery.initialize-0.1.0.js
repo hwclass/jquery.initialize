@@ -34,7 +34,7 @@
     
     var setEvents = function () {
       for (var countForEventsObj = 0, len = getSize(opts.events); countForEventsObj < len; countForEventsObj++) {
-        $(this).on(opts.events[countForEventsObj].name, opts.events[countForEventsObj].funcBody)
+        $(this).on(opts.events[countForEventsObj].name, opts.events[countForEventsObj].fn)
       }
     }
     
