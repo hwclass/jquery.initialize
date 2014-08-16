@@ -1,4 +1,4 @@
-## jquery.initialize 0.1.0
+## jquery.initalize 0.2.0
 
 An basic element initializer plugin for jQuery.
 
@@ -11,19 +11,19 @@ $(document).ready(function () {
     events : [
       {
         name : 'click',
-        funcBody : function () {
+        fn : function () {
           console.log('clicked...');
         }
       },
       {
         name : 'dblclick',
-        funcBody : function () {
+        fn : function () {
           console.log('double-clicked...');
         }
       },
       {
         name : 'mouseover',
-        funcBody : function () {
+        fn : function () {
           console.log('mouse-hovered...');
         }
       }
