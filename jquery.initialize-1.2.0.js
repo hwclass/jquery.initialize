@@ -65,7 +65,7 @@
       setEvents();
       addTemplates();
     } else {
-      console.log($(self) + ' is not allowed to be initialized.');
+      console.log($(self).attr('id') + ' is not allowed to be initialized.');
     }
     
     return self;
