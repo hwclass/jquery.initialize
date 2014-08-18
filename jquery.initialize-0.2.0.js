@@ -52,10 +52,8 @@
           var currentValue = values[count]; 
           if (currentValue) {
               count += 1;
-              console.log(currentValue);
               return currentValue;
           } else {
-            console.log(substr);
             return substr;
           }
         });
