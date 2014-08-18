@@ -64,6 +64,8 @@
     if (opts.init) {
       setEvents();
       addTemplates();
+    } else {
+      console.log($(self) + ' is not allowed to be initialized.');
     }
     
     return self;
