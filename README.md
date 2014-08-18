@@ -11,8 +11,8 @@ This plugin makes an element initialize and attach for defined events with their
 $(document).ready(function () {
         
   $('#header').initialize({
-    data : ['header','this is a header container.'],
-    template : '<span>{0} - {1}</span>',
+    data : ['header','this is a header container.', (function() { return 'this is the third parameter for header.'})()],
+    template : '<span>{0} - {1} - {2}</span>',
     events : [
       {
         name : 'click',
@@ -37,8 +37,8 @@ $(document).ready(function () {
   });
 
   $('#main_content').initialize({
-    data : ['main','this is a main container.'],
-    template : '<span>{0} - {1}</span>',
+    data : ['main','this is a main container.', (function() { return 'this is the third parameter for main container.'})()],
+    template : '<span>{0} - {1} - {2}</span>',
     events : [
       {
         name : 'click',
@@ -63,8 +63,8 @@ $(document).ready(function () {
   });
 
   $('#footer').initialize({
-    data : ['footer','footer container'],
-    template : '<span>{0} - {1}</span>',
+    data : ['footer','footer container', (function() { return 'this is the third parameter for footer.'})()],
+    template : '<span>{0} - {1} - {2}</span>',
     events : [
       {
         name : 'click',
