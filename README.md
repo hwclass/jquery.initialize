@@ -7,25 +7,79 @@ This plugin makes an element initialize and attach for defined events with their
 <pre lang="javascript">
 <code>
 $(document).ready(function () {
-  
-  $('.logo').initialize({
+        
+  $('#header').initialize({
+    data : ['header','this is a header container.'],
+    template : '<span>{0} - {1}</span>',
     events : [
       {
         name : 'click',
         fn : function () {
-          console.log('clicked...');
+          console.log('clicked header...');
         }
       },
       {
         name : 'dblclick',
         fn : function () {
-          console.log('double-clicked...');
+          console.log('double-clicked header...');
         }
       },
       {
         name : 'mouseover',
         fn : function () {
-          console.log('mouse-hovered...');
+          console.log('mouse-hovered header...');
+        }
+      }
+    ],
+    init : true
+  });
+
+  $('#main_content').initialize({
+    data : ['main','this is a main container.'],
+    template : '<span>{0} - {1}</span>',
+    events : [
+      {
+        name : 'click',
+        fn : function () {
+          console.log('clicked main...');
+        }
+      },
+      {
+        name : 'dblclick',
+        fn : function () {
+          console.log('double-clicked main...');
+        }
+      },
+      {
+        name : 'mouseover',
+        fn : function () {
+          console.log('mouse-hovered main...');
+        }
+      }
+    ],
+    init : true
+  });
+
+  $('#footer').initialize({
+    data : ['footer','footer container'],
+    template : '<span>{0} - {1}</span>',
+    events : [
+      {
+        name : 'click',
+        fn : function () {
+          console.log('clicked footer...');
+        }
+      },
+      {
+        name : 'dblclick',
+        fn : function () {
+          console.log('double-clicked footer...');
+        }
+      },
+      {
+        name : 'mouseover',
+        fn : function () {
+          console.log('mouse-hovered footer...');
         }
       }
     ],
