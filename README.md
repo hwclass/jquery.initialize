@@ -1,4 +1,4 @@
-## jquery.initalize 1.2.0
+## jquery.initialize 1.2.0
 
 <i>Latest update done up to 1.2.0 : data properties, template property and string template replacing.</i>
 
