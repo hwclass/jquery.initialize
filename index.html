@@ -3,9 +3,95 @@
 	<head>
 			<title>basic todo app with mithril</title>
 			<meta charset="utf-8">
-			<script type="text/javascript" src="jquery.initialize.js"></script>
+			<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+			<script type="text/javascript" src="jquery.initialize-0.2.0.js"></script>
 	</head>
 	<body>
-		
+		<div id="header" style="background: #DDD;">
+			header
+		</div>
+		<div id="main_content" style="background: #EEE;">
+			main
+		</div>
+		<div id="footer" style="background: #EDEDED;">
+			footer
+		</div>
+		<script type="text/javascript">
+			$(document).ready(function () {
+			  
+			  $('#header').initialize({
+			    events : [
+			      {
+			        name : 'click',
+			        fn : function () {
+			          console.log('clicked header...');
+			        }
+			      },
+			      {
+			        name : 'dblclick',
+			        fn : function () {
+			          console.log('double-clicked header...');
+			        }
+			      },
+			      {
+			        name : 'mouseover',
+			        fn : function () {
+			          console.log('mouse-hovered header...');
+			        }
+			      }
+			    ],
+			    init : true
+			  });
+
+			  $('#main_content').initialize({
+			    events : [
+			      {
+			        name : 'click',
+			        fn : function () {
+			          console.log('clicked main...');
+			        }
+			      },
+			      {
+			        name : 'dblclick',
+			        fn : function () {
+			          console.log('double-clicked main...');
+			        }
+			      },
+			      {
+			        name : 'mouseover',
+			        fn : function () {
+			          console.log('mouse-hovered main...');
+			        }
+			      }
+			    ],
+			    init : true
+			  });
+
+			  $('#footer').initialize({
+			    events : [
+			      {
+			        name : 'click',
+			        fn : function () {
+			          console.log('clicked footer...');
+			        }
+			      },
+			      {
+			        name : 'dblclick',
+			        fn : function () {
+			          console.log('double-clicked footer...');
+			        }
+			      },
+			      {
+			        name : 'mouseover',
+			        fn : function () {
+			          console.log('mouse-hovered footer...');
+			        }
+			      }
+			    ],
+			    init : true
+			  });
+			  
+			});
+		</script>
 	</body>
 </html>

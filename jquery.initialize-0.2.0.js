@@ -20,8 +20,10 @@
 (function ($) {
   
   $.fn.initialize = function (options) {
-    
-    var currentElement = $(this),
+
+    var self = this;
+
+    var currentElement = $(self),
         opts = options; 
     
     var getSize = function(obj) {
@@ -34,7 +36,7 @@
     
     var setEvents = function () {
       for (var countForEventsObj = 0, len = getSize(opts.events); countForEventsObj < len; countForEventsObj++) {
-        $(this).on(opts.events[countForEventsObj].name, opts.events[countForEventsObj].fn)
+        $(self).on(opts.events[countForEventsObj].name, opts.events[countForEventsObj].fn)
       }
     }
     
@@ -42,7 +44,7 @@
       setEvents();
     }
     
-    return this;
+    return self;
     
   }
 })(jQuery);
