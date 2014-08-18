@@ -6,9 +6,9 @@
 			<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 			<script type="text/javascript" src="jquery.initialize-1.2.0.js"></script>
 			<style>
-				#header {background: #DDD;}
-				#main_content {background: #EEE;}
-				#footer {background: #EDEDED;}
+				#header {background: #DDD; cursor: pointer;}
+				#main_content {background: #EEE; cursor: pointer;}
+				#footer {background: #EDEDED; cursor: pointer;}
 			</style>
 	</head>
 	<body>
@@ -31,7 +31,63 @@
 			      {
 			        name : 'dblclick',
 			        fn : function () {
+
 			          console.log('double-clicked header...');
+
+          		  $('#main_content').initialize({
+          	  		data : [0,'this is a main container.', (function() { return 'this is the third parameter for main container.'})()],
+          	  	  template : '<span>{0} - {1} - {2}</span>',
+          		    events : [
+          		      {
+          		        name : 'click',
+          		        fn : function () {
+          		          console.log('clicked main...');
+          		        }
+          		      },
+          		      {
+          		        name : 'dblclick',
+          		        fn : function () {
+
+          		          console.log('double-clicked main...');
+
+                    	  $('#footer').initialize({
+                      		data : [0,'footer container', (function() { return 'this is the third parameter for footer.'})()],
+                      	  template : '<span>{0} - {1} - {2}</span>',
+                    	    events : [
+                    	      {
+                    	        name : 'click',
+                    	        fn : function () {
+                    	          console.log('clicked footer...');
+                    	        }
+                    	      },
+                    	      {
+                    	        name : 'dblclick',
+                    	        fn : function () {
+                    	          console.log('double-clicked footer...');
+                    	        }
+                    	      },
+                    	      {
+                    	        name : 'mouseover',
+                    	        fn : function () {
+                    	          console.log('mouse-hovered footer...');
+                    	        }
+                    	      }
+                    	    ],
+                    	    init : true
+                    	  });
+          		          
+          		        }
+          		      },
+          		      {
+          		        name : 'mouseover',
+          		        fn : function () {
+          		          console.log('mouse-hovered main...');
+          		        }
+          		      }
+          		    ],
+          		    init : true
+          		  });
+
 			        }
 			      },
 			      {
@@ -44,58 +100,6 @@
 			    init : true
 			  });
 
-			  $('#main_content').initialize({
-		  		data : [0,'this is a main container.', (function() { return 'this is the third parameter for main container.'})()],
-		  	  template : '<span>{0} - {1} - {2}</span>',
-			    events : [
-			      {
-			        name : 'click',
-			        fn : function () {
-			          console.log('clicked main...');
-			        }
-			      },
-			      {
-			        name : 'dblclick',
-			        fn : function () {
-			          console.log('double-clicked main...');
-			        }
-			      },
-			      {
-			        name : 'mouseover',
-			        fn : function () {
-			          console.log('mouse-hovered main...');
-			        }
-			      }
-			    ],
-			    init : true
-			  });
-
-			  $('#footer').initialize({
-		  		data : [0,'footer container', (function() { return 'this is the third parameter for footer.'})()],
-		  	  template : '<span>{0} - {1} - {2}</span>',
-			    events : [
-			      {
-			        name : 'click',
-			        fn : function () {
-			          console.log('clicked footer...');
-			        }
-			      },
-			      {
-			        name : 'dblclick',
-			        fn : function () {
-			          console.log('double-clicked footer...');
-			        }
-			      },
-			      {
-			        name : 'mouseover',
-			        fn : function () {
-			          console.log('mouse-hovered footer...');
-			        }
-			      }
-			    ],
-			    init : true
-			  });
-			  
 			});
 		</script>
 	</body>
