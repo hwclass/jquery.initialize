@@ -1,7 +1,7 @@
 ## jquery.initalize 1.2.0
 
 An basic element initializer plugin for jQuery.
-This plugin makes an element initialize and attach for defined events with their names and datas into a string templates.
+This plugin makes an element initialize and attach for defined events with their names and datas into their own string templates.
 
 ### usage (Modern Browsers)
 <pre lang="javascript">

@@ -15,7 +15,7 @@
  * Released: July 29th, 2014
  *
  *
- * makes an element initialize and attach for defined events with their names and datas into a string templates.
+ * makes an element initialize and attach for defined events with their names and datas into their own string templates.
  */
 (function ($) {
   
