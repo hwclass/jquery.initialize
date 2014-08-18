@@ -20,6 +20,8 @@
 			$(document).ready(function () {
 			  
 			  $('#header').initialize({
+			  	data : ['header','this is a header container.'],
+			    template : '<span>{0} - {1}</span>',
 			    events : [
 			      {
 			        name : 'click',
@@ -44,6 +46,8 @@
 			  });
 
 			  $('#main_content').initialize({
+		  		data : ['main','this is a main container.'],
+		  	  template : '<span>{0} - {1}</span>',
 			    events : [
 			      {
 			        name : 'click',
@@ -68,6 +72,8 @@
 			  });
 
 			  $('#footer').initialize({
+		  		data : ['footer','footer container'],
+		  	  template : '<span>{0} - {1}</span>',
 			    events : [
 			      {
 			        name : 'click',

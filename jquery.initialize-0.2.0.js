@@ -33,15 +33,39 @@
       }
       return size;
     };
-    
+
     var setEvents = function () {
       for (var countForEventsObj = 0, len = getSize(opts.events); countForEventsObj < len; countForEventsObj++) {
         $(self).on(opts.events[countForEventsObj].name, opts.events[countForEventsObj].fn)
       }
     }
+
+    var addTemplates = function() {
+      self.innerHTML = injectStringWithValues(opts.template, opts.data);
+      $(self).html(self.innerHTML);
+    }
+
+    function injectStringWithValues(source, values) {
+      var count = 0;
+      if (values && values.length) {
+        return source.replace(/\{\d+\}/g, function(substr) {
+          var currentValue = values[count]; 
+          if (currentValue) {
+              count += 1;
+              console.log(currentValue);
+              return currentValue;
+          } else {
+            console.log(substr);
+            return substr;
+          }
+        });
+      }
+      return source;
+    };
     
     if (opts.init) {
       setEvents();
+      addTemplates();
     }
     
     return self;
