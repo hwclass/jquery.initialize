@@ -19,7 +19,7 @@
 			$(document).ready(function () {
 			  
 			  $('#header').initialize({
-			  	data : ['header','this is a header container.', (function() { return 'this is the third parameter for header.'})()],
+			  	data : [0,'this is a header container.', (function() { return 'this is the third parameter for header.'})()],
 			    template : '<span>{0} - {1} - {2}</span>',
 			    events : [
 			      {
@@ -45,7 +45,7 @@
 			  });
 
 			  $('#main_content').initialize({
-		  		data : ['main','this is a main container.', (function() { return 'this is the third parameter for main container.'})()],
+		  		data : [0,'this is a main container.', (function() { return 'this is the third parameter for main container.'})()],
 		  	  template : '<span>{0} - {1} - {2}</span>',
 			    events : [
 			      {
@@ -71,7 +71,7 @@
 			  });
 
 			  $('#footer').initialize({
-		  		data : ['footer','footer container', (function() { return 'this is the third parameter for footer.'})()],
+		  		data : [0,'footer container', (function() { return 'this is the third parameter for footer.'})()],
 		  	  template : '<span>{0} - {1} - {2}</span>',
 			    events : [
 			      {

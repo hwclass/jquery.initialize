@@ -49,7 +49,7 @@
       var count = 0;
       if (values && values.length) {
         return source.replace(/\{\d+\}/g, function(substr) {
-          var currentValue = values[count]; 
+          var currentValue = values[count].toString(); 
           if (currentValue) {
               count += 1;
               return currentValue;
