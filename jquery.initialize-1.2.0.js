@@ -23,6 +23,10 @@
 
     var self = this;
 
+    var methods = options.methods;
+
+    console.log(methods);
+
     var currentElement = $(self),
         opts = options; 
     
