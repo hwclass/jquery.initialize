@@ -1,1 +1,11 @@
 /bower_components/jquery/src/*
+/bower_components/bootstrap/fonts/*
+/bower_components/bootstrap/grunt/*
+/bower_components/bootstrap/js/*
+/bower_components/bootstrap/less/*
+/bower_components/bootstrap/.bower.json
+/bower_components/bootstrap/bower.json
+/bower_components/bootstrap/Gruntfile.js
+/bower_components/bootstrap/LICENCE
+/bower_components/bootstrap/package.json
+/bower_components/bootstrap/README.md
