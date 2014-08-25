@@ -5,7 +5,7 @@
 A simple element initializer context plugin for jQuery.
 This plugin makes an element initialize and attach for defined events with their names and datas into their own string templates.
 
-### usage (Modern Browsers)
+### usage with id (Modern Browsers)
 <pre lang="javascript">
 <code>
 $(document).ready(function () {
@@ -43,5 +43,14 @@ $(document).ready(function () {
 
 });
 
+</code>
+</pre>
+
+### usage with class names (Modern Browsers)
+<pre lang="javascript">
+<code>
+  $('.sampleElementToInitialize').initialize({
+    init : false
+  });
 </code>
 </pre>
