@@ -11,7 +11,7 @@
  * jQuery authoring guidelines
  *
  * Launch  : July 2014
- * Version : 1.2.0
+ * Version : 1.3.0
  * Released: July 29th, 2014
  *
  *
@@ -67,7 +67,10 @@
       setEvents();
       addTemplates();
     } else {
-      console.log($(self).attr('id') + ' is not allowed to be initialized.');
+      if (self.length > 0) {
+        $(self).remove();
+      }
+      console.log(($(self).attr('class') !== null?$(self).attr('class'):$(self).attr('id'))  + ' is not allowed to be initialized.');
     }
     
     return self;

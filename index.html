@@ -10,6 +10,7 @@
 	</head>
 	<body>
     <div id="header" class="blog-masthead"></div>
+    <div class="sampleElementToInitialize">sampleElementToInitialize</div>
     <div id="main_content" class="container"></div>
     <div id="footer" class="blog-footer"></div>
     <script type="text/javascript">
@@ -100,16 +101,32 @@
             {
               name : 'mouseover',
               fn : function () {
-                console.log('mouse-hovered header...');
+                console.log('mouse-hovered header...' + this);
+              }
+            },
+            {
+              name : 'onload',
+              fn : function () {
+                console.log('loaded header...');
               }
             }
           ],
           methods : {
             log : function(message) {
               console.log(message);
+            },
+            subscribe : function(topic, listener) {
+              $(this)['properties']['topic'] = 'topik';
+            },
+            publish : function (topic, info) {
+              $(this)['properties']['topic'] = 'topik';
             }
           },
           init : true
+        });
+
+        $('.sampleElementToInitialize').initialize({
+          init : false
         });
 
       });
