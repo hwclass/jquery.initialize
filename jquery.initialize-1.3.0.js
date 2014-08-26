@@ -28,6 +28,11 @@
     var currentElement = $(self),
         opts = options; 
     
+    var config = {
+      showLogs : true,
+      logs : []
+    };
+
     var getSize = function(obj) {
       var size = 0, key;
       for (key in obj) {
@@ -47,7 +52,7 @@
       $(self).html(self.innerHTML);
     }
 
-    function injectStringWithValues(source, values) {
+    var injectStringWithValues = function (source, values) {
       var count = 0;
       if (values && values.length) {
         return source.replace(/\{\d+\}/g, function(substr) {
@@ -62,7 +67,11 @@
       }
       return source;
     };
-    
+
+    var log = function (message) {
+      console.log(message);
+    }
+
     if (opts.init) {
       setEvents();
       addTemplates();

@@ -23,7 +23,7 @@
             {
               name : 'click',
               fn : function () {
-                console.log('clicked header...');
+                console.log('click event triggered...');
               }
             },
             {
@@ -101,19 +101,16 @@
             {
               name : 'mouseover',
               fn : function () {
-                console.log('mouse-hovered header...' + this);
+                console.log('mouse-hovered header...');
               }
             }
           ],
           methods : {
             log : function(message) {
-              console.log(message);
-            },
-            subscribe : function(topic, listener) {
-              $(this)['properties']['topic'] = 'topik';
-            },
-            publish : function (topic, info) {
-              $(this)['properties']['topic'] = 'topik';
+              if (config.showLogs) {
+                console.log(message);
+              }
+              config.logs.push(message);
             }
           },
           init : true
