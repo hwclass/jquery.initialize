@@ -1,7 +1,9 @@
 ## jquery.initialize 1.4.0
 
-<i>Latest update done up to 1.4.0 : added sub elements data binding.</i>
-<i>Latest update done up to 1.3.0 : data properties, template property and string template replacing.</i>
+<ul>
+<li><i>Latest update done up to 1.4.0 : added sub elements data binding.</i></li>
+<li><i>Latest update done up to 1.3.0 : data properties, template property and string template replacing.</i></li>
+</ul>
 
 A simple element initializer context plugin for jQuery.
 This plugin makes an element initialize and attach for defined events with their names and datas into their own string templates.
