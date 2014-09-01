@@ -6,7 +6,7 @@
       <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
       <link rel="stylesheet" href="style/blog.css">
 			<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
-			<script type="text/javascript" src="jquery.initialize-1.3.0.js"></script>
+			<script type="text/javascript" src="jquery.initialize-1.4.0.js"></script>
 	</head>
 	<body>
     <div id="header" class="blog-masthead"></div>
@@ -17,13 +17,37 @@
       $(function () {
         
         $('#header').initialize({
+          elements : [
+            {
+              name : '#subElement1',
+              events : [
+                {
+                  name : 'click',
+                  fn : function (e) {
+                    console.log('clicked first sub element...');
+                  }
+                }
+              ]
+            },
+            {
+              name : '#subElement2',
+              events : [
+                {
+                  name : 'click',
+                  fn : function (e) {
+                    console.log('clicked second sub element...');
+                  }
+                }
+              ]
+            }
+          ],
           data : ['Home','New features', 'Press', 'New hires', 'About'],
-          template : '<div class="container"><nav class="blog-nav"><a href="#" class="blog-nav-item active">{0}</a><a href="#" class="blog-nav-item">{1}</a><a href="#" class="blog-nav-item">{2}</a><a href="#" class="blog-nav-item">{3}</a><a href="#" class="blog-nav-item">{4}</a></nav></div>',
+          template : '<div class="container"><nav class="blog-nav"><a href="#" class="blog-nav-item active">{0}</a><a href="#" class="blog-nav-item">{1}</a><a href="#" class="blog-nav-item">{2}</a><a href="#" class="blog-nav-item">{3}</a><a href="#" class="blog-nav-item">{4}</a></nav></div><div id="subElement1">subElement1</div><div id="subElement2">subElement2</div>',
           events : [
             {
               name : 'click',
-              fn : function () {
-                console.log('click event triggered...');
+              fn : function (e) {
+                console.log('clicked header...');
               }
             },
             {
