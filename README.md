@@ -1,5 +1,7 @@
 ## jquery.initialize 1.4.0
 
+<a href="https://github.com/hwclass/jquery.initialize/wiki">Go to jQuery Initialize Wiki</a>
+
 <ul>
 <li><i>Latest update done up to 1.4.0 : added sub elements data binding.</i></li>
 <li><i>Latest update done up to 1.3.0 : data properties, template property and string template replacing.</i></li>
