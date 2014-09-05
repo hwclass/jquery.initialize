@@ -10,7 +10,7 @@
 A simple element initializer context plugin for jQuery.
 This plugin makes an element initialize and attach for defined events with their names and datas into their own string templates.
 
-### usage with id (Modern Browsers)
+### usage with (Modern Browsers)
 <pre lang="javascript">
 <code>
 $(document).ready(function () {
