@@ -79,7 +79,7 @@ $(document).ready(function () {
 <pre lang="javascript">
 <code>
   $('.sampleElementToInitialize').initialize({
-    init : false
+    init : true
   });
 </code>
 </pre>
