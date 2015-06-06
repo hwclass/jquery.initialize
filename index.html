@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-			<title>Jquery Initialize Plugin Sample File</title>
-			<meta charset="utf-8">
-      <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-      <link rel="stylesheet" href="style/blog.css">
-			<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
-			<script type="text/javascript" src="jquery.initialize-1.4.0.js"></script>
+		<title>Jquery Initialize Plugin Sample File</title>
+		<meta charset="utf-8">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style/blog.css">
+		<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script type="text/javascript" src="jquery.initialize-1.4.0.js"></script>
 	</head>
 	<body>
     <div id="header" class="blog-masthead"></div>
@@ -15,7 +15,7 @@
     <div id="footer" class="blog-footer"></div>
     <script type="text/javascript">
       $(function () {
-        
+
         $('#header').initialize({
           elements : [
             {
@@ -141,7 +141,7 @@
         });
 
         $('.sampleElementToInitialize').initialize({
-          init : false
+          init : true
         });
 
       });
